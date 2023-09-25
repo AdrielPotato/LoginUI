@@ -1,0 +1,64 @@
+<section class="vh-100" style="background-color: #508bfc;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card shadow-2-strong" style="border-radius: 1rem;">
+          <div class="card-body p-5">
+
+            <h3 class="mb-5 text-center">Register</h3>
+
+            <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+              <div class="form-floating mb-4">
+                <input formControlName="firstname" type="text" class="form-control form-control-lg" id="firstname"
+                  placeholder="First name">
+                <label for="firstname">First Name</label>
+                <div class="invalid-feedback">*required</div>
+              </div>
+              <div class="form-floating mb-4">
+                <input formControlName="lastname" type="text" class="form-control form-control-lg" id="lastname"
+                  placeholder="Last name">
+                <label for="lasttname">Last Name</label>
+                <div class="invalid-feedback">*required</div>
+              </div>
+              <div class="form-floating mb-4">
+                <input formControlName="email" type="email" class="form-control form-control-lg" id="email"
+                  placeholder="name@example.com">
+                <label for="email">Email address</label>
+                <div class="invalid-feedback">*valid email is required</div>
+              </div>
+              <div class="form-floating mb-4">
+                <input formControlName="username" type="text" class="form-control form-control-lg" id="username"
+                  placeholder="Username">
+                <label for="username">Username</label>
+                <div class="invalid-feedback">*required</div>
+              </div>
+              <div class="form-floating mb-4">
+                <input formControlName="password" type="password" class="form-control form-control-lg" id="password"
+                  placeholder="Password">
+                <label for="password">Password</label>
+                <div class="invalid-feedback">Please provide your password.</div>
+              </div>
+              <div class="form-floating mb-4">
+                <input formControlName="confirmPassword" type="password" class="form-control form-control-lg"
+                  id="confirmPassword" placeholder="Password">
+                <label for="confirmPassword">Confirm Password</label>
+                <div class="invalid-feedback">Please provide your password.</div>
+              </div>
+              <div class="text-center">
+              <button [disabled]="signupForm.invalid" class="btn btn-primary btn-lg text-uppercase fw-bold"
+                type="submit">Sign Up</button>
+              </div>
+            </form>
+            <hr class="my-4">
+
+            <div class="text-center">
+              <p class="mb-0">Already have an account? <a href="login" class="text-black-50 fw-bold">Login</a>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

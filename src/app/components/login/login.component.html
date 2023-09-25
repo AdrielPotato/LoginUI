@@ -1,0 +1,51 @@
+<body class="vh-100" style="background-color: #508bfc;">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                <div class="card border-0 shadow rounded-3 my-5">
+                    <div class="card-body p-4 p-sm-5">
+                        <h5 class="card-title text-center mb-5 fw-light fs-5">Sign In</h5>
+                        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                            <div class="form-floating mb-3">
+                                <input formControlName="email" type="email" class="form-control" id="email"
+                                    placeholder="name@example.com">
+                                <label for="email">Email address</label>
+                                <div class="invalid-feedback">*valid email is required</div>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input formControlName="password" type="password" class="form-control" id="password"
+                                    placeholder="Password">
+                                <label for="password">Password</label>
+                                <div class="invalid-feedback">Please provide your password.</div>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" value="" id="rememberPasswordCheck">
+                                <label class="form-check-label" for="rememberPasswordCheck">
+                                    Remember password
+                                </label>
+
+                            </div>
+
+                            <div class="d-grid">
+                                <button [disabled]="loginForm.invalid"
+                                    class="btn btn-primary btn-login text-uppercase fw-bold"
+                                    type="submit">Signin</button>
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <a id="forget" class="font-weight-bold">Forgot Password?</a>
+                            </div>
+                            <hr class="my-4">
+
+                        </form>
+
+                        <div>
+                            <p class="mb-0">Don't have an account? <a href="signup" class="text-black-50 fw-bold">Sign
+                                    Up</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

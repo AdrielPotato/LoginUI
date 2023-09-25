@@ -1,0 +1,25 @@
+<p>Hello {{ username }}</p>
+<ul *ngFor="let data of weatherList">
+    <li>{{data.date}}</li>
+    <li>{{data.temperatureC}}</li>
+    <li>{{data.temperatureF}}</li>
+    <li>{{data.summary}}</li>
+</ul>
+<ul *ngFor="let data of accountList">
+    <li>{{data.id}}</li>
+    <li>{{data.firstName}}</li>
+    <li>{{data.lastName}}</li>
+    <li>{{data.email}}</li>
+    <li>{{data.userName}}</li>
+</ul>
+
+
+<hr class="my-4">
+
+
+
+
+
+
+
+<button type="button" class="btn btn-primary btn-sm" (click)="logout()">logout</button>
